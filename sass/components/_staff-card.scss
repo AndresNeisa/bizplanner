@@ -1,0 +1,113 @@
+.staff-card{
+
+    text-align: left;
+
+    &__name{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &__position{
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
+
+    &__img{
+        height: 29rem;
+        width: 23rem;
+        object-fit: cover;
+        
+        &--l{
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        }
+
+        &--r{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+        }
+        
+    }
+
+    &__img-border{
+        position: relative;
+        margin-top: calc(29rem * 0.11);
+        display: inline-block;
+        &::before{
+            content: "";
+            height: 28.3rem;
+            width: 22.3rem;
+            display: inline-block;
+            position: absolute;      
+            background-color: var(--color-bg-white);      
+            z-index: -9;
+        }
+
+        &::after{
+            content: "";
+            height: 29rem;
+            width: 23rem;
+            display: inline-block;
+            position: absolute;
+            z-index: -10;
+        }
+
+        &--l::before{ //colored bg
+            clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+            transform: translate(14%,-8.7%);
+        }
+
+        &--l::after{ // colored border
+            clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+            transform: translate(-88%,-10%);
+            background-color: var(--color-decoration-2);
+        }
+
+        &--r::before{ //colored bg
+            clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+            transform: translate(-14%,-8.7%);
+        }
+
+        &--r::after{ // colored border
+            clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+            transform: translate(-115%,-10%);
+            background-color: var(--color-decoration-1);
+        }
+
+        &--l{
+            margin-right: calc(23rem * 0.13);
+        }
+
+        &--r{
+            margin-left: calc(23rem * 0.13);
+        }
+    }
+
+    &__social-media{
+        text-align: right;
+
+        &--r{
+            text-align: left;
+        }
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            color: var(--color-decoration-3);
+            border-radius: 50%;
+            border: solid 1px var(--color-decoration-3);
+            height: 2rem;
+            width: 2rem;
+            font-size: 1.2rem;
+            display: inline-block;
+            text-align: center;
+            line-height: 2rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &:nth-child(even){
+        text-align: right;
+    }
+
+}

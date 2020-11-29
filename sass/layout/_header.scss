@@ -1,0 +1,30 @@
+.hero-section{
+    display: flex;
+    width: var(--wrapper-primary);
+    margin: 0 auto;
+    overflow: visible;
+    align-items: center;
+
+    &__info{
+        flex: 0 0 50%;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 1rem 0;
+    }
+
+    &__image{
+        flex: 0 0 71%;
+        transform: translateX(0%);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }  
+
+    &__cta{
+        display: flex;
+    }
+}

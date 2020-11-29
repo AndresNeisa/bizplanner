@@ -1,0 +1,40 @@
+.btn{
+    &,
+    &:link, 
+    &:visited {
+        background-color: var(--color-decoration-2);
+        color: var(--color-bg-white);
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 2.2rem 3.5rem;
+        border-radius: 1rem;
+        display: inline-block;
+
+        text-decoration: none;
+        align-self: flex-start;
+
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.btn-play{
+    margin-left: 5rem;
+
+    &__link{
+        display: flex;
+        align-items: center;
+        &:link, 
+        &:visited{
+            text-decoration: none;
+            font-size: 2rem;
+            color: var(--color-decoration-2);
+        }
+    }
+
+    &__icon{
+        font-size: 5.6rem;
+        color: var(--color-decoration-3);
+        margin-right: 2rem;
+    }
+}

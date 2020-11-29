@@ -1,0 +1,83 @@
+.navbar{
+    width: var(--wrapper-primary);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        width: 21.3rem;
+        height: 4.6rem;
+        margin: 3rem 0;
+    }
+
+    &__menu{
+        list-style: none;
+        display: flex;
+    }
+
+    &__item{
+        margin-left: 6rem;
+        position: relative;
+        transition: all 0.2s;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -2.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            clip-path: polygon(50% 0,100% 100%, 0 100%);
+            background-color: var(--color-decoration-2);
+            opacity: 0;
+        }
+
+        &:hover{
+            transform:translateY(-3px);
+            // box-shadow:  0 1rem 3rem rgba(0,0,0,0.1);
+            color: var(--color-decoration-2);
+        }
+
+        &:hover::before{
+            transform:translateY(-3px);
+            opacity: 1;
+        }
+
+        &--active{
+            color: var(--color-decoration-1);
+
+            &::before{
+                background-color: var(--color-decoration-1);
+                opacity: 1;
+            }
+
+            &:hover::before{
+                background-color: var(--color-decoration-2);
+            }
+        }    
+        
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            display: inline-block;
+            background-color: transparent;
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.8rem;
+            font-weight: 300;
+        }
+    }
+
+    &--footer{
+        flex-direction: column;
+        font-size: 1rem;
+
+        [class *= "link"]{
+            font-size: 1.6rem;
+        }
+        
+    }
+}

@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Pangram;
+    src: url('../font/Pangram-Black.otf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: Pangram;
+    src: url('../font/Pangram-Bold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Pangram;
+    src: url('../font/Pangram-Medium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Pangram;
+    src: url('../font/Pangram-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Pangram;
+    src: url('../font/Pangram-Light.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Pangram;
+    src: url('../font/Pangram-ExtraLight.otf');
+    font-weight: 200;
+}
+
+.header{
+    &-primary{
+        font-family: Panagram, sans-serif;
+        font-weight: 600;
+        font-size: 7.5rem;
+    }
+
+    &-secondary{
+        font-family: Panagram, sans-serif;
+        font-weight: 600;
+        font-size: 5rem;
+    }
+
+    
+    &-tertiary{
+        font-family: Panagram, sans-serif;
+        font-weight: 400;
+        font-size: 3.2rem;
+        &--c1{
+           color: var(--color-decoration-2); 
+        }
+        
+    }
+}
+
+.paragraph{
+    font-family: Pangram, sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    color: var(--color-grey);
+}

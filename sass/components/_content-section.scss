@@ -1,0 +1,88 @@
+.content-section{
+    display: flex;
+    justify-content: flex-end;
+    width: var(--wrapper-primary);
+    margin: 0 auto;
+    overflow: visible;
+
+    &__img{
+        flex: 0 0 70%;
+        align-self: center;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__info{
+        flex: 0 0 48%;
+        padding-left: 7.5rem;
+        padding-top: 4.5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        &::before{
+            content: "\f101";
+            font-family: "FontAwesome";
+            padding-right: 3rem;
+
+            text-align: justify;
+            line-height: 2.5rem;
+        }
+
+        @for $i from 1 through 3{
+            &:nth-child(#{$i})::before{
+                color: var(--color-decoration- + $i);
+            }
+        }
+
+        &:not(:last-child){
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__description{
+        & [class*="header"]{
+            margin-bottom: 4rem;
+        }
+
+        & .paragraph:not(:last-child){
+            margin-bottom: 6rem;
+        }
+    }
+
+    &--b{
+        justify-content: flex-start;
+        
+        & >[class*="info"]{
+            padding-left: 0; 
+            padding-top: 0;
+            padding-right: 7.5rem;
+            order: -1;
+        }
+
+        & .header-tertiary{
+            font-weight: 600;
+        }
+
+        & .header-secondary{
+            margin-bottom: 8rem;
+        }
+
+        @for $i from 1 through 3{
+            & .header-tertiary:nth-of-type(#{$i}){
+                color: var(--color-decoration- + $i);
+            }
+        }
+    }
+
+}

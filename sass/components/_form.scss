@@ -1,0 +1,42 @@
+.form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.8rem;
+
+    &__label{
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+    }
+
+    &__input{
+        font-size: inherit;
+        font-family: inherit;
+        margin-bottom: 3.2rem;
+        line-height: 2rem;
+        padding: 2rem 3rem;
+
+        border-radius: 1rem;
+        border: 1px solid;
+        resize: none; 
+
+        @for $i from 1 through 3{
+            &:nth-of-type(#{$i}){
+                border-color: var(--color-decoration- + $i);
+            }
+        }
+    }
+
+    &__label-link{
+        &:link,
+        &:visited{
+            color: var(--color-decoration-2);
+            margin-left: 1.5rem;
+        }
+    }
+
+    & .btn{
+        margin-top: 2rem;
+    }
+}

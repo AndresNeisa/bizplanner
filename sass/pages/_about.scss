@@ -1,0 +1,27 @@
+.content-section{
+    &--b .content-section__info .content-section__mission{
+            font-weight: 400;
+            color: var(--color-decoration-2) !important;
+            margin-bottom: 3rem;
+    }
+}
+
+.stats__cards{
+
+    width: var(--wrapper-primary);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    @for $i from 1 through 3{
+        & .stat-card:nth-child(#{$i}){
+            border-color: var(--color-decoration- + $i);
+
+            [class *= "icon"]{
+                color: var(--color-decoration- + $i);
+            }
+        }
+    }
+
+}

@@ -18,6 +18,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .questions{
@@ -44,33 +45,3 @@
     }
 }
 
-.footer{
-    text-align: center;
-    width: var(--wrapper-primary);
-    margin: 0 auto;
-
-    &__info{
-        width: 90%;
-        height: 50%;
-        margin: 0 auto;
-        background-color: var(--color-decoration-2);
-        // border-top-left-radius: 50%;
-        // border-top-right-radius: 50%;
-        clip-path: circle(72% at 50% 160%);
-        color: var(--color-bg-white);
-    }
-
-    &__contact-info{
-        font-size: 1.6rem;
-        line-height: 2.5rem;
-        padding-top: 17rem;
-        font-weight: 400;
-    }
-
-    &__copyright{
-        padding: 7rem;
-        font-size: 1rem;
-        line-height: 2.5rem;
-        font-weight: 300;
-    }
-}

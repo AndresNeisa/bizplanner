@@ -5,6 +5,10 @@
     margin: 0 auto;
     overflow: visible;
 
+    @media only screen and (max-width: $tablet-port){
+        flex-wrap: wrap;
+    }
+
     &__img{
         flex: 0 0 70%;
         align-self: center;
@@ -60,6 +64,15 @@
         }
     }
 
+    & .header-secondary{
+        margin-bottom: 3rem;
+        min-width: 45rem;
+    }
+
+    & .btn{
+        margin-top: 2rem;
+    }
+
     &--b{
         justify-content: flex-start;
         
@@ -74,9 +87,7 @@
             font-weight: 600;
         }
 
-        & .header-secondary{
-            margin-bottom: 8rem;
-        }
+        
 
         @for $i from 1 through 3{
             & .header-tertiary:nth-of-type(#{$i}){

@@ -13,6 +13,16 @@
         justify-content: space-between;
 
         padding: 1rem 0;
+
+        [class *= "header"]{
+            min-width: 63rem;
+        }
+
+        @media only screen and (max-width: $medium-desktop){
+            [class *= "header"]{
+                min-width: 57rem;
+            }
+        }
     }
 
     &__image{

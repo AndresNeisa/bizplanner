@@ -1,0 +1,44 @@
+.footer{
+    text-align: center;
+    width: var(--wrapper-primary);
+    margin: 0 auto;
+    position: relative;
+
+    &__info{
+        width: 72%;
+        height: 40rem;
+        margin: 0 auto;
+        background-color: var(--color-decoration-2);
+        border-top-left-radius: 100rem;
+        border-top-right-radius: 100rem;
+        
+        // clip-path: circle(72% at 50% 160%);
+        color: var(--color-bg-white);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding-top: 13rem;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+        // transform: translateY(80%);
+        
+    }
+
+    &__contact-info{
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+
+    }
+
+    &__copyright{
+        padding: 7rem;
+        font-size: 1rem;
+        line-height: 2.5rem;
+        font-weight: 300;
+    }
+}
